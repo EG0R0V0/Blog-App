@@ -1,0 +1,22 @@
+h1{
+font-family: Inter;
+font-weight: 700;
+font-size: 40px;
+line-height: 100%;
+}
+
+.main-title{
+    margin-bottom: 60px;
+}
+
+.title-input{
+    margin-bottom: 30px;
+    display: block;
+    width: 500px;
+    height: 60px;
+}
+
+.public-btn{
+    width: 500px;
+    height: 60px;
+}
