@@ -12,6 +12,7 @@ line-height: 100%;
 .title-input{
     margin-bottom: 30px;
     display: block;
+    box-sizing: border-box;
     width: 500px;
     height: 60px;
 }
@@ -19,4 +20,9 @@ line-height: 100%;
 .public-btn{
     width: 500px;
     height: 60px;
+    color: white;
+    background-color: #0094FF;
+    font-size: 32px;
+    font-weight: 400px;
+    border: none ;
 }
