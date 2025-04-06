@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +14,38 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1 class="main-title">Новый пост</h1>
+    <div class="container">
+      <div class="row">
+        <div class="columns">
+          <h2 class="main-title">Новый пост</h2>
+          <div>
+            <input
+              class="js-title-input title-input"
+              type="text"
+              maxlength="30"
+              placeholder="Заголовок"
+            />
+          </div>
+          <div>
+            <textarea
+              class="js-text-input text-input"
+              maxlength="200"
+              wrap="hard"
+              cols="20"
+              placeholder="Напишите пост"
+            ></textarea>
+          </div>
 
-    <div>
-      <input class="js-title-input title-input" type="text" />
+          <button class="js-public-btn public-btn">Опубликовать</button>
+        </div>
+        <div class="columns">
+          <h2 class="main-title">Лента</h2>
+          <div id="js-post" class="post" style="font-size: 32px">
+            Тут пока пусто...
+          </div>
+        </div>
+      </div>
     </div>
-
-    <button class="js-public-btn public-btn">Опубликовать</button>
 
     <script src="index.js"></script>
   </body>
