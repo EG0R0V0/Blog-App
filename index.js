@@ -25,12 +25,29 @@ publicBtnNode.addEventListener('click', function () {
     validation();
 })
 
+titleInputNode.addEventListener("input", function () { //запись позволяет не прописывать полностью функцию, а написать просто validation
+    validation
+});
+textInputtNode.addEventListener("input", validation);
+
+
 function validation() {
     const titleLen = titleInputNode.value.length;
     const textLen  = textInputtNode.value.length;
 
+    if (titleLen > TITLE_VALIDATION_LIMIT) {
+        validationMassage.innerText = `Длина заголовка не должна превышать ${TITLE_VALIDATION_LIMIT} символов`;
+        validationMassage.classList.remove("validationMassage_hidden")
+        return;
+    }
 
-    console.log(titleLen, textLen);
+    if (textLen > TEXT_VALIDATION_LIMIT) {
+        validationMassage.innerText = `Длина текста не должна превышать ${TEXT_VALIDATION_LIMIT} символов`;
+        validationMassage.classList.remove("validationMassage_hidden")
+        return;
+    }
+
+    validationMassage.classList.add("validationMassage_hidden");
 }
 
 

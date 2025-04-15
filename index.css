@@ -1,87 +1,89 @@
 body {
-    font-family: Inter;
-  }
+  font-family: Inter;
+}
   
-  .container {
-    margin: 0 auto;
-    width: 1100px;
-    padding-top: 100px;
-  }
-  
-  h2 {
-    font-weight: 700;
-    font-size: 40px;
-  }
-  
-  p {
-    font-size: 32px;
-  }
-  
-  .main-title {
-    margin-bottom: 60px;
-  }
-  
-  .row {
-    display: flex;
-    gap: 100px;
-  }
-  
-  .columns {
-    width: 50%;
-  }
-  
-  .title-input {
-    margin-bottom: 30px;
-    display: block;
-    box-sizing: border-box;
-    width: 500px;
-    height: 60px;
-    font-size: 32px;
-  }
-  
-  .text-input {
-    margin-bottom: 30px;
-    display: block;
-    box-sizing: border-box;
-    width: 500px;
-    height: 250px;
-    font-size: 32px;
-    line-height: 34px;
-    resize: none;
-    font-family: inherit;
-  }
-  
-  .public-btn {
-    margin-bottom: 30px;
-    width: 500px;
-    height: 60px;
-    color: white;
-    background-color: #0094ff;
-    font-size: 32px;
-    font-weight: 400px;
-    border: none;
-   }
-  
-  
-  
-  .validationMassage {
-    font-size: 25px;
-    color: #ff0000;
-  }
-  
-  .post__title {
-    width: 500px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  
-  .post__text {
-    width: 500px;
-    word-wrap: break-word;
-  }
-  
-  .post {
-    margin-bottom: 50px;
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  padding-top: 100px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+p {
+  font-size: 32px;
+}
+
+.main-title {
+  margin-bottom: 60px;
+}
+
+.row {
+  display: flex;
+  gap: 100px;
+}
+
+.columns {
+  width: 50%;
+}
+
+.title-input {
+  margin-bottom: 30px;
+  display: block;
+  box-sizing: border-box;
+  width: 500px;
+  height: 60px;
+  font-size: 32px;
+}
+
+.text-input {
+  margin-bottom: 30px;
+  display: block;
+  box-sizing: border-box;
+  width: 500px;
+  height: 250px;
+  font-size: 32px;
+  line-height: 34px;
+  resize: none;
+  font-family: inherit;
+}
+
+.public-btn {
+  margin-bottom: 30px;
+  width: 500px;
+  height: 60px;
+  color: white;
+  background-color: #0094ff;
+  font-size: 32px;
+  font-weight: 400px;
+  border: none;
   }
 
-  
+
+
+.validationMassage {
+  font-size: 25px;
+  color: #ff0000;
+}
+
+.post__title {
+  width: 500px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.post__text {
+  width: 500px;
+  word-wrap: break-word;
+}
+
+.post {
+  margin-bottom: 50px;
+}
+
+.validationMassage_hidden{
+  display: none;
+}
