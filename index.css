@@ -1,46 +1,45 @@
-body{
+body {
     font-family: Inter;
-    
-}
-
-.container{
+  }
+  
+  .container {
     margin: 0 auto;
     width: 1100px;
-    padding-top:  100px;
-}
-
-h2{
+    padding-top: 100px;
+  }
+  
+  h2 {
     font-weight: 700;
     font-size: 40px;
-}
-
-p{
+  }
+  
+  p {
     font-size: 32px;
-}
-
-.main-title{
+  }
+  
+  .main-title {
     margin-bottom: 60px;
-}
-
-.row {
+  }
+  
+  .row {
     display: flex;
     gap: 100px;
-}
-
-.columns {
+  }
+  
+  .columns {
     width: 50%;
-}
-
-.title-input{
+  }
+  
+  .title-input {
     margin-bottom: 30px;
     display: block;
     box-sizing: border-box;
     width: 500px;
     height: 60px;
     font-size: 32px;
-}
-
-.text-input{
+  }
+  
+  .text-input {
     margin-bottom: 30px;
     display: block;
     box-sizing: border-box;
@@ -50,25 +49,39 @@ p{
     line-height: 34px;
     resize: none;
     font-family: inherit;
-}
-
-.public-btn{
+  }
+  
+  .public-btn {
+    margin-bottom: 30px;
     width: 500px;
     height: 60px;
     color: white;
-    background-color: #0094FF;
+    background-color: #0094ff;
     font-size: 32px;
     font-weight: 400px;
-    border: none ;
-}
-
-.post__title{
+    border: none;
+   }
+  
+  
+  
+  .validationMassage {
+    font-size: 25px;
+    color: #ff0000;
+  }
+  
+  .post__title {
     width: 500px;
     font-weight: 700;
     margin-bottom: 15px;
-}
-
-.post__text{
+  }
+  
+  .post__text {
     width: 500px;
     word-wrap: break-word;
-}
+  }
+  
+  .post {
+    margin-bottom: 50px;
+  }
+
+  
