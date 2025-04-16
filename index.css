@@ -87,3 +87,8 @@ p {
 .validationMassage_hidden{
   display: none;
 }
+
+.quantity_check_massage{
+  font-size: 25px;
+  color: blue;
+}

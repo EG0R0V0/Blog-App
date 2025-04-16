@@ -9,51 +9,71 @@ const TEXT_VALIDATION_LIMIT = 20; // Лимит вынесен в отдельн
 
 
 const titleInputNode = document.querySelector('.js-title-input');
-const textInputtNode = document.querySelector('.js-text-input');
+const textInputNode = document.querySelector('.js-text-input');
 const publicBtnNode = document.querySelector('.js-public-btn'); //находим элемент по классу
 const postNode = document.getElementById('js-post'); //находим элемент по id  в html
 const validationMassage = document.getElementById('js-validationMassage');
 
 
+
 publicBtnNode.addEventListener('click', function () {
-    const postFromUser = getPostFromUser();
+    const titleLen = titleInputNode.value.length;
+    const textLen  = textInputNode.value.length;
 
-    addPost(postFromUser);
+    if (titleLen <= TITLE_VALIDATION_LIMIT && textLen <= TEXT_VALIDATION_LIMIT) { //если количество символов пользователя в ТЕКСТЕ превыщает установленный лимит, выводится сообщение о перероверке 
+        
+        const postFromUser = getPostFromUser();
+
+        addPost(postFromUser);
+        
+        renderPosts();
+
+        validation();
+    } else{
+        validationMassage.innerHTML = `            
+            <div class = 'validationMassage'>
+                <p class = 'quantity_check_massage'>Проверьте количество символов в заголовке или тексте :)</p>
+            </div>` 
+    }
     
-    renderPosts();
-
-    validation();
 })
 
-titleInputNode.addEventListener("input", function () { //запись позволяет не прописывать полностью функцию, а написать просто validation
-    validation
-});
-textInputtNode.addEventListener("input", validation);
 
-
+titleInputNode.addEventListener("input", validation); //запись позволяет не прописывать полностью функцию, а написать просто validation
+    
 function validation() {
     const titleLen = titleInputNode.value.length;
-    const textLen  = textInputtNode.value.length;
 
     if (titleLen > TITLE_VALIDATION_LIMIT) {
-        validationMassage.innerText = `Длина заголовка не должна превышать ${TITLE_VALIDATION_LIMIT} символов`;
-        validationMassage.classList.remove("validationMassage_hidden")
-        return;
-    }
 
-    if (textLen > TEXT_VALIDATION_LIMIT) {
-        validationMassage.innerText = `Длина текста не должна превышать ${TEXT_VALIDATION_LIMIT} символов`;
-        validationMassage.classList.remove("validationMassage_hidden")
+        validationMassage.innerText = `Длина заголовка не должна превышать ${TITLE_VALIDATION_LIMIT} символов`;
+        validationMassage.classList.remove("validationMassage_hidden");
         return;
     }
 
     validationMassage.classList.add("validationMassage_hidden");
 }
+   
+
+textInputNode.addEventListener("input", function () { // при изменении поля ввода текста 
+    const textLen  = textInputNode.value.length; 
+
+    validationMassage.classList.remove("validationMassage_hidden");
+    validationMassage.innerText =("До лимита в тексте осталось: " + (TEXT_VALIDATION_LIMIT - parseInt(textLen)) + " символов"); // считает сколько осталось символов
+    
+    
+    if (textLen > TEXT_VALIDATION_LIMIT) {
+        validationMassage.innerText = `Длина текста не должна превышать ${TEXT_VALIDATION_LIMIT}       символов, сократите текст!`;
+        validationMassage.classList.remove("validationMassage_hidden")
+        return;
+    }
+    
+});
 
 
 function getPostFromUser() {     // получить данные из поля ввода
     const title = titleInputNode.value;
-    const text = textInputtNode.value;
+    const text = textInputNode.value;
 
     return{
         title: title, //синтаксис позволяет псать title, если назваение переменной совпадает с ее значением
