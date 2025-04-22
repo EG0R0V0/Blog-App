@@ -69,6 +69,12 @@ p {
   color: #ff0000;
 }
 
+.post__dt{
+  text-align: right;
+  font-size: 20px;
+  color: white;
+}
+
 .post__title {
   width: 500px;
   font-weight: 700;
@@ -80,9 +86,15 @@ p {
   word-wrap: break-word;
 }
 
-.post {
+
+.new__post{
   margin-bottom: 50px;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.419);
+  border-radius: 10px;
 }
+
 
 .validationMassage_hidden{
   display: none;

@@ -74,8 +74,11 @@ textInputNode.addEventListener("input", function () { // при изменени
 function getPostFromUser() {     // получить данные из поля ввода
     const title = titleInputNode.value;
     const text = textInputNode.value;
+    const date = new Date();
+    const dt = `${date.getHours()}:${date.getMinutes()}`;
 
     return{
+        date: dt,
         title: title, //синтаксис позволяет псать title, если назваение переменной совпадает с ее значением
         text: text
     };
@@ -101,7 +104,8 @@ function renderPosts() {     // отобразить пост
 
     posts.forEach(post => {
         postsHTML +=`        
-            <div class = 'post'>
+            <div id = 'js-post' class = 'new__post'>
+                <p class = 'post__dt'> Выложено в ${post.date}</p>
                 <p class = 'post__title'>${post.title}</p>
                 <p class = 'post__text'>${post.text}</p>
             </div>    
