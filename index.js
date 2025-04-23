@@ -3,8 +3,8 @@
 //     text: '',
 // };
 const posts = []; //создаем массив для создания нескольких постов
-const TITLE_VALIDATION_LIMIT = 10;
-const TEXT_VALIDATION_LIMIT = 20; // Лимит вынесен в отдельную константу    
+const TITLE_VALIDATION_LIMIT = 15;
+const TEXT_VALIDATION_LIMIT = 50; // Лимит вынесен в отдельную константу    
 
 
 
