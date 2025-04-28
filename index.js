@@ -3,7 +3,11 @@
 //     text: '',
 // };
 const posts = []; //создаем массив для создания нескольких постов
+<<<<<<< HEAD
 const TITLE_VALIDATION_LIMIT = 20;
+=======
+const TITLE_VALIDATION_LIMIT = 15;
+>>>>>>> 22642f75b281579ab27e7aede1deb8cbaa1a735f
 const TEXT_VALIDATION_LIMIT = 50; // Лимит вынесен в отдельную константу    
 
 
@@ -117,9 +121,12 @@ function renderPosts() {     // отобразить пост
 
     postNode.innerHTML = postsHTML;
 }
+<<<<<<< HEAD
 
 function resetFields() {  //функция обенуляет поля ввода, присваивая значение "пустая строка"
     titleInputNode.value = "";
 
     textInputNode.value = "";
 }
+=======
+>>>>>>> 22642f75b281579ab27e7aede1deb8cbaa1a735f
