@@ -3,8 +3,8 @@
 //     text: '',
 // };
 const posts = []; //создаем массив для создания нескольких постов
-const TITLE_VALIDATION_LIMIT = 10;
-const TEXT_VALIDATION_LIMIT = 20; // Лимит вынесен в отдельную константу    
+const TITLE_VALIDATION_LIMIT = 20;
+const TEXT_VALIDATION_LIMIT = 50; // Лимит вынесен в отдельную константу    
 
 
 
@@ -29,12 +29,15 @@ publicBtnNode.addEventListener('click', function () {
         renderPosts();
 
         validation();
+
+        resetFields();
     } else{
         validationMassage.innerHTML = `            
             <div class = 'validationMassage'>
                 <p class = 'quantity_check_massage'>Проверьте количество символов в заголовке или тексте :)</p>
             </div>` 
     }
+    
     
 })
 
@@ -113,4 +116,10 @@ function renderPosts() {     // отобразить пост
     });
 
     postNode.innerHTML = postsHTML;
+}
+
+function resetFields() {  //функция обенуляет поля ввода, присваивая значение "пустая строка"
+    titleInputNode.value = "";
+
+    textInputNode.value = "";
 }
